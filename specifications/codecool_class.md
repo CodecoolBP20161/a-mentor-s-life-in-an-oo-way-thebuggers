@@ -66,3 +66,17 @@ Gives back a student with the same full name as the argument from ```students```
 
 #### Return value
 ```Mentor``` object
+
+### ```doorbell_rings```
+Event happen compared to the arguments
+
+#### Arguments
+* ```door_opener```
+  * data_type: string
+  * description: represent a mentor or a codecooler who opens the door
+* ```ringer_person```
+  * data_type : string
+  * represent a Person who ring the bell
+
+#### Return value
+None
