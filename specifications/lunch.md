@@ -14,6 +14,9 @@ None
 * ```vegetarian```
   * data type: boolean value
   * description: True if the food is vegetarian, False otherwise
+* ```restaurant_status```
+  * data type: boolean value
+  * description: True if the restaurant is open, False otherwise
 
 
 ## Instance methods
