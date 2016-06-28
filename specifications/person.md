@@ -39,6 +39,6 @@ None
 ### ```eat```
 Decides if the person eats the provided food or not, and modifies his/her energy level accordingly, then prints out the result.
 #### Arguments
-A Food object.
+self, food_object (a Food object)
 #### Return value
 None
