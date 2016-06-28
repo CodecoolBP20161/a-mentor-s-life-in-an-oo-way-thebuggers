@@ -45,3 +45,10 @@ Decides if the person eats the provided food or not, and modifies his/her energy
 self, food_object (a Food object)
 #### Return value
 None
+
+### ```death```
+If a person's energy level drops below 1, he/she dies (gets removed from the csv too).
+#### Arguments
+self
+#### Return value
+None
