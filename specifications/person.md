@@ -26,6 +26,9 @@ None.
 * ```vegan```
  * data type: boolean
  * True if the person is a vegan, False if not
+* ```hungriness```
+ * data type: integer
+ * stores the hungriness level of the person (1, 2, or 3)
 
 ## Instance methods
 
@@ -40,5 +43,12 @@ None
 Decides if the person eats the provided food or not, and modifies his/her energy level accordingly, then prints out the result.
 #### Arguments
 self, food_object (a Food object)
+#### Return value
+None
+
+### ```death```
+If a person's energy level drops below 1, he/she dies (gets removed from the csv too).
+#### Arguments
+self
 #### Return value
 None
