@@ -15,7 +15,6 @@ None
   * data type: boolean value
   * description: True if the food is vegetarian, False otherwise
 
-```Food``` object
 
 ## Instance methods
 
