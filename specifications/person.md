@@ -26,6 +26,9 @@ None.
 * ```vegan```
  * data type: boolean
  * True if the person is a vegan, False if not
+* ```hungriness```
+ * data type: integer
+ * stores the hungriness level of the person (1, 2, or 3)
 
 ## Instance methods
 
