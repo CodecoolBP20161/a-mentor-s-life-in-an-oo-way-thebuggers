@@ -8,6 +8,8 @@
 
 * the next event is launchbreak at noon. since Tomi mentor's hungry level is at the top, he goes for a big bowl of chicken despite the fact he's a vegan.
 
-* Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse imperdiet metus nec leo euismod imperdiet. Etiam viverra maximus laoreet. Phasellus vitae suscipit massa, ac rhoncus velit. Morbi pellentesque felis vel tortor maximus, ut maximus urna pharetra. Duis porttitor cursus dui.
+* we see that owen wants to eat his good 'ol regular chicken, but its closed, so he dies of hunger, and gets deleted from the list of students.
 
-* Aliquam finibus id odio ut egestas. Cras eu semper ante. Vivamus vel ligula nulla. Morbi eu dui risus. Duis non pellentesque felis, in suscipit metus. Maecenas commodo vel nulla sit amet fermentum. Nam semper, nibh ac scelerisque dictum, ligula lectus hendrerit quam, non porta tortor nisi eget magna.
+* the bell rings again. this time Dani mentor goes to the with low energy level and sees that an intruder tries to rob the place. he choses to pay him a generous €18-22 amount, and solves the situation.
+
+* last event of the day is the ending ceremony. depending on the mentor's energy level that executes the ceremony various events can happen.
