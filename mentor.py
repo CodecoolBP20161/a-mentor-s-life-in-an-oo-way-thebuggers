@@ -9,8 +9,7 @@ class Mentor(Person):
         super(Mentor, self).__init__(*args, **kwargs)
         self.nickname = nickname
 
-    @classmethod
-    def create_by_csv(cls, csv_file):
+    def create_by_csv(self, csv_file):
         mentors = []
         with open(csv_file, newline='') as csvfile:
             all_mentors = csv.reader(csvfile)
