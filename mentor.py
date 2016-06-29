@@ -19,8 +19,20 @@ class Mentor(Person):
                 mentors.append(name)
         return mentors
 
-    def open_ringing_door(person):
+    def open_ringing_door(self, person):
         if isinstance(person, Pornstar):
             if self.energy_level < 2:
                 print("Come to the other office Lady {0}, i will test your skills! -said by mentor {1}".format(person.first_name, self.nickname))
-        pass
+            if self.energy_level > 2:
+                print("Here take some money lady {0}, said by mmentor {1}".format(person.first_name, self.first_name))
+        if isinstance(person, Robber):
+            if self.energy_level < 2:
+                print("Ohh noh, get the fuck out")
+            if self.energy_level > 2:
+                print("I will beat the shit about you!")
+
+    def morning_routine(self, person):
+        if person.energy_level < 2:
+            print("Take here some cocain")
+        if person.energy_level > 2:
+            print("Take some weed")
