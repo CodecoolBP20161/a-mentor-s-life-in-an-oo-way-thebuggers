@@ -9,7 +9,11 @@ class Person:
         self.hungriness = hungriness
 
     def death(self, people):
-        ggg
+        if self.energy_level < 1:
+            print("{0}'s energy level dropped to zero and died.".format(self.first_name))
+            for element in people:
+                if (self.first_name and self.last_name) in element:
+                    return True
 
     def eat(self, food_object):
         if food_object.restaurant_status:
@@ -19,7 +23,7 @@ class Person:
             else:
                 if self.hungriness < 3:
                     self.energy_level -= 1
-                    if death(self.energy_level):
+                    if death():  # argument
                         pass
                     else:
                         print("{0} goes back to work without eating".format(self.first_name))
@@ -27,7 +31,7 @@ class Person:
                     print("{0} is too hungry to be vegan this time".format(self.first_name))
         else:
             self.energy_level -= 1
-            if death(self.energy_level):
+            if death():  # argument
                 pass
             else:
                 print("There's no {0}, so {1} goes back to work hungry".format(food_object.name, self.first_name))
