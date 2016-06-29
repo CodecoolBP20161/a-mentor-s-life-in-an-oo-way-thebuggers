@@ -21,18 +21,25 @@ class Mentor(Person):
 
     def open_ringing_door(self, person):
         if isinstance(person, Pornstar):
-            if self.energy_level < 2:
-                print("Come to the other office Lady {0}, i will test your skills! -said by mentor {1}".format(person.first_name, self.nickname))
             if self.energy_level > 2:
-                print("Here take some money lady {0}, said by mmentor {1}".format(person.first_name, self.first_name))
+                self.energy_level -= 2
+                print("Come to the other office lady {0}, i will test your skills! -said by mentor {1}".format(person.name, self.nickname))
+                print("Mentor {0} energylevel is now {1}.".format(self.nickname, self.energy_level))
+            if self.energy_level < 2:
+                print("I'am too tired for this shit. Here take some money lady {0}, said by mentor {1}".format(person.name, self.nickname))
+                self.energy_level += 2
+                print("Mentor {0} energylevel is now {1}.".format(self.nickname, self.energy_level))
         if isinstance(person, Robber):
             if self.energy_level < 2:
                 print("Ohh noh, get the fuck out")
+                print("Mentor {0} energylevel is now {1}.".format(self.nickname, self.energy_level))
             if self.energy_level > 2:
+                self.energy_level -= 2
                 print("I will beat the shit about you!")
+                print("Mentor {0} energylevel is now {1}.".format(self.nickname, self.energy_level))
 
     def morning_routine(self, person):
         if person.energy_level < 2:
-            print("Take here some cocain")
+            print("You look freakin tired! Here take some Coke! said by mentor {0}".format(self.nickname))
         if person.energy_level > 2:
-            print("Take some weed")
+            print("Woo, calm down. This will good for you! said by mentor {0}, and give some weed to {1}".format(self.nickname, person.last_name))
