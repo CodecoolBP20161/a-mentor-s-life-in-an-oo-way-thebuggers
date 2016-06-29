@@ -1,9 +1,7 @@
-from person import Person
+class Robber(object):
 
-
-class Robber(Person):
-
-    def __init__(self, outfit, weapon, *args, **kwargs):
+    def __init__(self, name, outfit, weapon):
+        self.name = name
         self.outfit = outfit
         self.weapon = weapon
         super(Robber, self).__init__(*args, **kwargs)

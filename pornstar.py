@@ -1,8 +1,6 @@
-from person import Person
+class Pornstar(object):
 
-
-class Pornstar(Person):
-
-    def __init__(self, sex_toy, *args, **kwargs):
+    def __init__(self, name, sex_toy):
+        self.name = name
         self.sex_toy = sex_toy
         super(Pornstar, self).__init__(*args, **kwargs)
