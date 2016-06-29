@@ -2,7 +2,7 @@ from person import Person
 
 
 class Student(Person):
-    def __init__(self, knowledge_level, *args, *kwargs):
+    def __init__(self, knowledge_level, *args, **kwargs):
         super().__init__(*args, *kwargs)
         self.knowledge_level = knowledge_level
 
