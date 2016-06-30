@@ -32,5 +32,6 @@ class CodecoolClass:
                 return self.students[i]
 
     def get_random_student(self):
-        for element in self.students:
-            
+        random_index = random.randint(1, len(self.students))
+        full_name = "{0} {1}".format(self.students[random_index].first_name, self.students[random_index].last_name)
+        return full_name
