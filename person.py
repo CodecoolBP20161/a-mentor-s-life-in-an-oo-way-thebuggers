@@ -1,3 +1,6 @@
+from student.py import Student
+
+
 class Person(object):
     def __init__(self, first_name, last_name, year_of_birth, gender, energy_level, vegan, hungriness):
         self.first_name = first_name
@@ -11,7 +14,8 @@ class Person(object):
     def death(self):
         if self.energy_level < 1:
             print("{0}'s' energy level dropped to zero and died.\nLest we forget!".format(self.first_name))
-            return (self.first_name, self.last_name)
+            Student.remove_dead(self.first_name, self.last_name)
+            return(True)
 
     def eat(self, food_object):
         print("""It's lunchbreak time! Finally...\nAfter the holy trinity of git

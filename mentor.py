@@ -68,6 +68,7 @@ class Mentor(Person):
             setattr(person, "energy_level", 3)
             print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
         if int(person.energy_level) > 2:
-            print("Woo, calm down. This will do good for you! said by mentor {0}, and gave some weed to {1}".format(self.nickname, person.first_name))
+            print("""Woo, calm down. This will do good for you! said by mentor {0},
+            and gave some weed to {1}""".format(self.nickname, person.first_name))
             setattr(person, "energy_level", 2)
             print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
