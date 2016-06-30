@@ -80,3 +80,10 @@ Event happen compared to the arguments
 
 #### Return value
 None
+
+### ```get_random_student```
+Returns a random student name from the students.csv (to be used with find_student_by_full_name).
+#### Arguments
+self
+#### Return value
+a full name (as a single string)
