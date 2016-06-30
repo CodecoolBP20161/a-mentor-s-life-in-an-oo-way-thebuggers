@@ -12,6 +12,20 @@ Person
   * data type: string
   * description: stores the level of the students knowledge
 
+## Class methods
+
+### ```create_by_csv```
+Make a list from the csv file
+
+#### Arguments
+* ```csv_file```
+  * data_type: csv
+  * description: file which stores the student info
+
+#### Return value
+<!-- ```Student``` object -->
+* List of students
+
 ## Instance methods
 
 ### ```__init__```
@@ -32,15 +46,3 @@ None
 
 #### Return value
 None
-
-### ```create_by_csv```
-Make a list from the csv file
-
-#### Arguments
-* ```csv_file```
-  * data_type: csv
-  * description: file which stores the student info
-
-#### Return value
-<!-- ```Student``` object -->
-* List of students
