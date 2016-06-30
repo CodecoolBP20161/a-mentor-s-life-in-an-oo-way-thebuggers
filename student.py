@@ -33,10 +33,10 @@ class Student(Person):
             a flying fuck about codecool. /"My work is done here/" thats what he said to himself while he was
             walking out of the office building, located under Nagymezo street 44""")
 
-    def remove_dead(self, first_name, last_name):
-        for i in self.students:
-            if (i.first_name == first_name) and (i.last_name == last_name):
-                i.energy_level = None
-                i.hungriness = None
-                i.first_name = "{0}{1}".format(i.first_name, "(†)")
-        print(i.first_name)
+    # def remove_dead(self, first_name, last_name):
+    #     for i in self.students:
+    #         if (i.first_name == first_name) and (i.last_name == last_name):
+    #             i.energy_level = None
+    #             i.hungriness = None
+    #             i.first_name = "{0}{1}".format(i.first_name, "(†)")
+    #     print(i.first_name)

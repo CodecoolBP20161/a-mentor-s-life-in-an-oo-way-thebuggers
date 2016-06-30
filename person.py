@@ -1,4 +1,4 @@
-from student.py import Student
+# from student.py import Student
 
 
 class Person(object):
@@ -14,7 +14,7 @@ class Person(object):
     def death(self):
         if self.energy_level < 1:
             print("{0}'s' energy level dropped to zero and died.\nLest we forget!".format(self.first_name))
-            Student.remove_dead(self.first_name, self.last_name)
+            # Student.remove_dead(self.first_name, self.last_name)
             return(True)
 
     def eat(self, food_object):
