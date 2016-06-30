@@ -1,4 +1,4 @@
-class Person:
+class Person(object):
     def __init__(self, first_name, last_name, year_of_birth, gender, energy_level, vegan, hungriness):
         self.first_name = first_name
         self.last_name = last_name
@@ -10,10 +10,11 @@ class Person:
 
     def death(self):
         if self.energy_level < 1:
-            print("{0}'s energy level dropped to zero and died.".format(self.first_name))
+            print("{0}'s' energy level dropped to zero and died.".format(self.first_name))
             return (self.first_name, self.last_name)
 
     def eat(self, food_object):
+        print("It's lunchbreak time! Finally...\nAfter the holy trinity of git commands, {0} is on the way to eat.".format(self.first_name))
         if food_object.restaurant_status:
             if not self.vegan or (self.vegan and food_object.vegetarian):
                 self.energy_level += 1
@@ -27,7 +28,7 @@ class Person:
                         print("{0} goes back to work without eating.".format(self.first_name))
                 else:
                     self.energy_level += 1
-                    print("{0} is too hungry to be vegan this time.".format(self.first_name))
+                    print("The only food around is {0}, but {1} is too hungry to be vegan this time.".format(food_object.name, self.first_name))
         else:
             self.energy_level -= 1
             if self.death():

@@ -10,6 +10,7 @@ class Student(Person):
 
     @classmethod
     def create_by_csv(cls, csv_file):
+        print("Mentors are initialized from CSV")
         cls.students = []
         with open(csv_file, newline='') as csvfile:
             all_students = csv.reader(csvfile)

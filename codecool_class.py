@@ -1,5 +1,6 @@
 from mentor import Mentor
 from student import Student
+import random
 
 
 class CodecoolClass:
@@ -24,8 +25,13 @@ class CodecoolClass:
             if j.last_name == name[1]:
                 return self.mentors[i]
 
-    def find_student_by_full_name(self, full_name): # returns a Student object from the list
+    def find_student_by_full_name(self, full_name):  # returns a Student object from the list
         name = full_name.split()
         for i, j in enumerate(self.students):
             if j.last_name == name[1]:
                 return self.students[i]
+
+    def get_random_student(self):
+        random_index = random.randint(1, len(self.students))
+        full_name = "{0} {1}".format(self.students[random_index].first_name, self.students[random_index].last_name)
+        return full_name
