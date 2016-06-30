@@ -11,6 +11,7 @@ class Mentor(Person):
 
     @classmethod
     def create_by_csv(cls, csv_file):
+        print("Mentors are initialized from CSV")
         cls.mentors = []
         with open(csv_file, newline='') as csvfile:
             all_mentors = csv.reader(csvfile)
@@ -22,24 +23,32 @@ class Mentor(Person):
     def open_ringing_door(self, person):
         if isinstance(person, Pornstar):
             if int(self.energy_level) > 2:
-                # int(self.energy_level) -= 2
-                print("Come to the other office lady {0}, i will test your skills! -said by mentor {1}".format(person.name, self.nickname))
-                print("Mentor {0} energylevel is now {1}.".format(self.nickname, int(self.energy_level)))
+                setattr(self, "energy_level", 1)
+                print("Come to the other office lady {0}, i will test your skills, in the other office! -said by mentor {1}".format(person.name, self.nickname))
+                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
+                return
             if int(self.energy_level) < 2:
                 print("I'am too tired for this shit. Here take some money lady {0}, said by mentor {1}".format(person.name, self.nickname))
-                # self.energy_level += 2
-                print("Mentor {0} energylevel is now {1}.".format(self.nickname, int(self.energy_level)))
+                setattr(self, "energy_level", 3)
+                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
+                return
         if isinstance(person, Robber):
             if int(self.energy_level) < 2:
                 print("Ohh noh, get the fuck out")
-                print("Mentor {0} energylevel is now {1}.".format(self.nickname, int(self.energy_level)))
+                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
+                return
             if int(self.energy_level) > 2:
-                self.energy_level -= 2
-                print("I will beat the shit about you!")
-                print("Mentor {0} energylevel is now {1}.".format(self.nickname, int(self.energy_level)))
+                setattr(self, "energy_level", 1)
+                print("I will beat the sh*t about you!")
+                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
+                return
 
     def morning_routine(self, person):
         if int(person.energy_level) < 2:
             print("You look freakin tired! Here take some Coke! said by mentor {0}".format(self.nickname))
+            setattr(person, "energy_level", 3)
+            print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
         if int(person.energy_level) > 2:
             print("Woo, calm down. This will good for you! said by mentor {0}, and give some weed to {1}".format(self.nickname, person.first_name))
+            setattr(person, "energy_level", 2)
+            print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
