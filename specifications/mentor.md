@@ -13,17 +13,7 @@ Person
   * data type: string
   * description: stores the mentors nickname
 
-## Instance methods
-
-### ```__init__```
-The constructor of the object.
-
-#### Arguments
-
-All of the arguments of the class itself and arguments form parent class
-
-#### Return value
-None
+## Class methods
 
 ### ```create_by_csv```
 Make a list form csv file
@@ -35,6 +25,18 @@ Make a list form csv file
 
 #### Return value
 Return back a list of Mentors
+
+## Instance methods
+
+### ```__init__```
+The constructor of the object.
+
+#### Arguments
+
+All of the arguments of the class itself and arguments form parent class
+
+#### Return value
+None
 
 ### ```morning_routine```
 A Method which check the argument student energy level

@@ -4,8 +4,6 @@ from student import Student
 from pornstar import Pornstar
 
 codecool_bp = CodecoolClass.generate_local()
-print("Mentors are initialized from CSV")
-print("Students are initialized from CSV")
 print("School @ {0}, in year {1} is created, with {2} mentors and 58 students".format(codecool_bp.location, codecool_bp.year, len(codecool_bp.mentors)))
 mentor_tomi = codecool_bp.find_mentor_by_full_name("Tamás Tompa")
 print("{0} {1} was found between the mentors with {2} energy".format(mentor_tomi.first_name, mentor_tomi.last_name, mentor_tomi.energy_level))
