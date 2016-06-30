@@ -49,6 +49,6 @@ None
 ### ```death```
 If a person's energy level drops below 1, he/she dies (gets removed from the csv too).
 #### Arguments
-self, people (the list of students and mentors)
+self
 #### Return value
-None
+first and last name of a deceased
