@@ -15,7 +15,7 @@ class CodecoolClass:
         cls.location = "Budapest"
         cls.year = 2016
         cls.mentors = Mentor.create_by_csv('data/mentors.csv')
-        cls.students = "sanyi"
+        cls.students = Student.create_by_csv('data/students.csv')
         return CodecoolClass(cls.location, cls.year, cls.mentors, cls.students)
 
     def find_mentor_by_full_name(self, full_name):  # returns a Mentor object from the list

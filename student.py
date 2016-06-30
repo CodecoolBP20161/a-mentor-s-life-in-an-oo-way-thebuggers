@@ -7,22 +7,23 @@ class Student(Person):
         super(Student, self).__init__(*args, **kwargs)
         self.knowledge_level = knowledge_level
 
-    def ending_routine(mentor):
-        if mentor.energy_level = 1:
-            print("alcohol")
-        if person.energy_level = 2:
-            print("weed")
-        if mentor.energy_level = 3:
-            print("cocain")
-        else:
-            print("fuck off")
 
     @classmethod
-    def create_by_csv(self, csv_file):
-        students = []
+    def create_by_csv(cls, csv_file):
+        cls.students = []
         with open(csv_file, newline='') as csvfile:
             all_students = csv.reader(csvfile)
             for row in all_students:
-                name = Person(row[0], row[1], row[2], row[3], row[4], row[5], row[6])
-                students.append(name)
-        return students
+                name = Student(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+                cls.students.append(name)
+        return cls.students
+
+    def ending_routine(self, mentor):
+        if self.energy_level == 1:
+            print("alcohol")
+        if self.energy_level == 2:
+            print("weed")
+        if self.energy_level == 3:
+            print("cocain")
+        else:
+            print("fuck off")
