@@ -14,23 +14,24 @@ class Person(object):
             return (self.first_name, self.last_name)
 
     def eat(self, food_object):
-        print("It's lunchbreak time! Finally...\nAfter the holy trinity of git commands, {0} is on the way to eat.".format(self.first_name))
+        print("It's lunchbreak time! Finally...\nAfter the holy trinity of git commands,{0} is on the way to eat.".format(self.first_name))
         if food_object.restaurant_status:
             if not self.vegan or (self.vegan and food_object.vegetarian):
                 self.energy_level += 1
                 print("{0} eats the {1} and goes back to work happily.".format(self.first_name, food_object.name))
             else:
-                if self.hungriness < 3:
+                if int(self.hungriness) < 3:
                     self.energy_level -= 1
                     if self.death():
                         pass
                     else:
                         print("{0} goes back to work without eating.".format(self.first_name))
                 else:
-                    self.energy_level += 1
-                    print("The only food around is {0}, but {1} is too hungry to be vegan this time.".format(food_object.name, self.first_name))
+                    setattr(self, "energy_level", 15)
+                    print("The only food around is {0}, but {1} is too hungry to be vegan this time.".format(
+                        food_object.name, self.first_name))
         else:
-            self.energy_level -= 1
+            setattr(self, "energy_level", 0)
             if self.death():
                 pass
             else:
