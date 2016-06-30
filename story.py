@@ -2,7 +2,9 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 from pornstar import Pornstar
+from robber import Robber
 from lunch import Food
+import time
 
 
 def print_find_mentor(someone):
@@ -25,15 +27,17 @@ def init_school():
     teachers = [mentor_miki, mentor_tomi, mentor_dani]
     # create list of 5 students
     students = []
-    for i in range(5):
-        students.append(codecool_bp.get_random_student())
+    for i in range(3):
+        students.append(codecool_bp.find_student_by_full_name(codecool_bp.get_random_student()))
     return [students, teachers]
 
 
 def morning_routine(school):
-    print("Student {0} energy level is high in the morning".format(school[0][0]))
+    print("How's student {0} {1} energy level in the morning".format(
+        school[0][0].first_name, school[0][0].last_name))
     school[1][2].morning_routine(school[0][0])
-    print("Student {0} energy level is low in the morning".format(school[0][1]))
+    print("Student {0} {1} energy level is low in the morning".format(
+        school[0][1].first_name, school[0][1].last_name))
     school[1][0].morning_routine(school[0][1])
 
 
@@ -49,17 +53,22 @@ def lunchbreak(school):
 
 
 def main():
+    # init_school()
+    # time.sleep(3)
     school = init_school()
-    init_school()
+    time.sleep(3)
     morning_routine(school)
+    time.sleep(3)
     pornstar = Pornstar("Crystal Ray", "One big black Dildo")
     opener = school[1][0]
     door_ringing(opener, pornstar)
+    time.sleep(3)
     lunchbreak(school)
+    time.sleep(3)
     robber = Robber("Viszkis", "Robbermask", "Bottle")
     opener = school[1][1]
     door_ringing(opener, robber)
-
-
+    time.sleep(3)
+    school[0][0].ending_routine(school[1][0])
 
 main()

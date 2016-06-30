@@ -26,7 +26,7 @@ class Person(object):
                 print("""{0} eats some {1} and goes back to work with enough energy to survive the day.
                 \n{0}'s energy level is now: {2}.""".format(self.first_name, food_object.name, self.energy_level))
             else:
-                if self.hungriness < 3:
+                if int(self.hungriness) < 3:
                     self.energy_level -= 1
                     if self.death():
                         pass
@@ -34,11 +34,11 @@ class Person(object):
                         print("""{0} goes back to work without eating.\n{0}'s
                          energy level is now: {1}.""".format(self.first_name, self.energy_level))
                 else:
-                    self.energy_level += 1
-                    print("""The only food around is {0}, but {1} is too hungry to be vegan this time.\n{1}'s
-                     energy level is now: {2}.""".format(food_object.name, self.first_name, self.energy_level))
+                    setattr(self, "energy_level", 15)
+                    print("The only food around is {0}, but {1} is too hungry to be vegan this time.".format(
+                        food_object.name, self.first_name))
         else:
-            self.energy_level -= 1
+            setattr(self, "energy_level", 0)
             if self.death():
                 pass
             else:
