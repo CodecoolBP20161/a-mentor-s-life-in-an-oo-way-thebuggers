@@ -55,8 +55,7 @@ daily routine in the office building located under Nagymezo 44, so there was no 
 just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell, \
 mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor \
 smashed the door in the robbers face and shout "Get the fuck out" The robber was so embarrassed, \
-he left immediately and gave up on his plans about invading codecool.
-                """.format(self.nickname))
+he left immediately and gave up on his plans about invading codecool.""".format(self.nickname))
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
             if int(self.energy_level) > 2:
                 setattr(self, "energy_level", 1)
@@ -67,22 +66,23 @@ daily routine in the office building located under Nagymezo 44, so there was no 
 just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell, \
 mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor \
 grabbed his gun which accidentally got fired and the bullet hit the office precious projector. \
-"I will beat the sh*t out from you for this!" shouted mentor {0}, then he punched the robber so
-hard that a mortal kombat fatality looks peanuts besides it.
-                """.format(self.nickname))
+"I will beat the sh*t out from you for this!" shouted mentor {0}, then he punched the robber so \
+hard that a mortal kombat fatality looks peanuts besides it.""".format(self.nickname))
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
 
     def morning_routine(self, person):
-        print("How's student {0} {1}'s energy level in the morning?".format(person.first_name, person.last_name))
+        print("How's student {0} {1}'s energy level in the morning?\nIt's on {2}.".format(
+            person.first_name, person.last_name, person.energy_level))
+        input()
         if int(person.energy_level) <= 2:
             print("Mentor {0} to {1}:You look freakin tired! Here, sniff some Coke!".format(
                     self.nickname, person.first_name))
             setattr(person, "energy_level", 1024)
-            print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
+            print("{0}'s energy level is now {1}. {0} túltolta".format(person.first_name, person.energy_level))
         elif int(person.energy_level) > 2:
             print("""
 Woo, calm down, you have some extra energy.
-This'll be good for you!-said mentor {0}, and gave some weed to {1}.""".format(self.nickname, person.first_name))
+This'll be good for you!-said mentor {0}, while passing a joint to {1}.""".format(self.nickname, person.first_name))
             setattr(person, "energy_level", 2)
             input()
             print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))

@@ -10,7 +10,7 @@
 0,Márk,Makai,1714,Male,3,True,1
 0,Levente,Csányi,1999,Male,1,False,1
 5,Gábor,Seres,4546,Male,3,False,1
-0,Áron,Kékes,1986,Male,0,False,1
+0,Áron,Kékes,1986,Male,1,False,1
 0,Szilvia,Lőrincz,1990,Female,1,True,1
 0,Máté,Tőtési,1996,Male,3,False,1
 0,Eszter,Kalóz,1996,Female,1,True,1
@@ -19,6 +19,6 @@
 10,Balázs,Andó,999,Male,1,False,1
 0,Szilárd,Ivanics,2058,Cyborg,3,False,1
 0,Lóránt,Bereczki,1993,Male,3,False,1
-0,Kris,Tóf,2000,Male,1,True,1
+0,Kristóf,Gallai,2000,Male,1,True,1
 0,Réka,Nagy,1986,Female,3,False,1
 0,Zoltán,Miklós,1986,Male,3,False,1
