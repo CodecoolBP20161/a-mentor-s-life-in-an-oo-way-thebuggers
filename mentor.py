@@ -4,14 +4,17 @@ from pornstar import Pornstar
 import csv
 
 
+text1 = """Woo, calm down, you have some extra energy.
+This'll be good for you!-said mentor {0}, and gave some weed to {1}."""
+
 class Mentor(Person):
     def __init__(self, nickname, *args, **kwargs):
         super(Mentor, self).__init__(*args, **kwargs)
         self.nickname = nickname
 
     @classmethod
-    def create_by_csv(cls, csv_file):
-        print("Mentors are initialized from CSV")
+    def create_by_csv(cls, csv_file):   # creates and returns a list of mentors
+        print("Mentors are initialized from CSV.")
         cls.mentors = []
         with open(csv_file, newline='') as csvfile:
             all_mentors = csv.reader(csvfile)
@@ -21,53 +24,66 @@ class Mentor(Person):
         return cls.mentors
 
     def open_ringing_door(self, person):
-        print("Someone just pressed the doorbell...")
+        print("Someone just pressed the doorbell...Who could it possibly be? :O")
+        input()
         if isinstance(person, Pornstar):
             if int(self.energy_level) > 2:
                 setattr(self, "energy_level", 1)
-                print("""A famous pornstar stood in front of the office door, mentor {1} opened the door,
-                /"Come to the other office lady {0}, I would like to perform a merge on you/", thats what
-                mentor {1} said while he thought /"My second honeymoon is finally here/"
-                """.format(person.name, self.nickname))
-                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
-                return
-            if int(self.energy_level) < 2:
-                print("""A famous pornstar stood in front of the office door, mentor {1} opened the door,
-                Im too tired for this shit, he said. Here take some money lady {0},
-                what do you mean you dont accept bitcoin? said by mentor {1}""".format(person.name, self.nickname))
+                print("""
+A famous pornstar stood in front of the office door with {2} in her hand, mentor {1} opened the door:
+"Come to the other office lady {0}, I would like to perform a merge on you",
+ that's what mentor {1} said while he thought:
+"My second honeymoon is finally here"
+                """.format(person.name, self.nickname, person.sex_toy))
+                input()
+                print("***after a while***\nMentor {0}'s energy level is now {1}.".format(
+                    self.nickname, int(self.energy_level)))
+            elif int(self.energy_level) < 2:
+                print("""
+A famous pornstar stood in front of the office door with {2} in her hand,
+mentor {1} opened the door:
+"Im too tired for this shit"-he said. "Here take some money lady {0}!"\n
+"What do you mean you dont accept bitcoin?"
+Mentor {1}'s happiness level would have dropped down...if he had one.
+                """.format(person.name, self.nickname, person.sex_toy))
                 setattr(self, "energy_level", 3)
+                input()
                 print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
-                return
         if isinstance(person, Robber):
             if int(self.energy_level) < 2:
-                print("""On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
-                the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
-                daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
-                just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
-                mentor {1} opened the door, and before the robber even had a chance to say something, our great mentor
-                smashed the door in the robbers face and shout /"Get the fuck out/" The robber was so embarrassed,
-                he leaved immediately and gave up on his plans about invading codecool.""")
-                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
-                return
+                print("""
+On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
+the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
+daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
+just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
+mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor
+smashed the door in the robbers face and shout /"Get the fuck out/" The robber was so embarrassed,
+he left immediately and gave up on his plans about invading codecool.
+                """.format(self.nickname))
+                print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
             if int(self.energy_level) > 2:
                 setattr(self, "energy_level", 1)
-                print("""On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
-                the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
-                daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
-                just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
-                mentor {1} opened the door, and before the robber even had a chance to say something, our great mentor
-                grabbed his gun which accidentally got fired and the bullet hit the office precious projector.
-                /"I will beat the sh*t out from you for this!/" shouted mentor {1}, then he punched the robber so
-                hard that a mortal kombat fatality looks peanuts besides it.""")
-                print("Mentor {0} energy level is now {1}.".format(self.nickname, int(self.energy_level)))
-                return
+                print("""
+On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
+the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
+daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
+just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
+mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor
+grabbed his gun which accidentally got fired and the bullet hit the office precious projector.
+/"I will beat the sh*t out from you for this!/" shouted mentor {0}, then he punched the robber so
+hard that a mortal kombat fatality looks peanuts besides it.
+                """.format(self.nickname))
+                print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
 
     def morning_routine(self, person):
-        if int(person.energy_level) < 2:
-            print("You look freakin tired! Here sniff some Coke! said by mentor {0}".format(self.nickname))
-            setattr(person, "energy_level", 3)
-            print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
-        if int(person.energy_level) > 2:
-            print("Woo, calm down. This will do good for you! said by mentor {0}, and gave some weed to {1}".format(self.nickname, person.first_name))
+        print("How's student {0} {1}'s energy level in the morning?".format(person.first_name, person.last_name))
+        if int(person.energy_level) <= 2:
+            print("Mentor {0} to {1}:You look freakin tired! Here, sniff some Coke!".format(
+                    self.nickname, person.first_name))
+            setattr(person, "energy_level", 1024)
+            print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
+        elif int(person.energy_level) > 2:
+            print(text1.format(self.nickname, person.first_name))
             setattr(person, "energy_level", 2)
-            print("{0} energy level is now {1}".format(person.first_name, person.energy_level))
+            input()
+            print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
