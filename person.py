@@ -36,8 +36,8 @@ dropped to zero and died.\nLest we forget!""".format(food_object.name, self.firs
 energy level is now: {1}.""".format(self.first_name, self.energy_level))
                 else:
                     self.energy_level = 15  # for testing, originally it's '+= 1'
-                    print("The only food around is {0}, but {1} is too hungry to be vegan this time.".format(
-                        food_object.name, self.first_name))
+                    print("The only food around is {0}, but {1}'s hungriness \
+level is too high ({2}) to be vegan this time.".format(food_object.name, self.first_name, self.hungriness))
         else:
             self.energy_level = 0  # for testing, originally it's '-= 1'
             if self.death():
