@@ -27,9 +27,9 @@ class Mentor(Person):
             if int(self.energy_level) > 2:
                 setattr(self, "energy_level", 1)
                 print("""
-A famous pornstar stood in front of the office door with {2} in her hand, mentor {1} opened the door:
-"Come to the other office lady {0}, I would like to perform a merge on you",
- that's what mentor {1} said while he thought:
+A famous pornstar stood in front of the office door with {2} in her hand, mentor {1} opened the door:\n
+"Come to the other office lady {0}, I would like to perform a merge on you", \
+that's what mentor {1} said while he thought:
 "My second honeymoon is finally here"
                 """.format(person.name, self.nickname, person.sex_toy))
                 input()
@@ -37,7 +37,7 @@ A famous pornstar stood in front of the office door with {2} in her hand, mentor
                     self.nickname, int(self.energy_level)))
             elif int(self.energy_level) < 2:
                 print("""
-A famous pornstar stood in front of the office door with {2} in her hand,
+A famous pornstar stood in front of the office door with {2} in her hand, \
 mentor {1} opened the door:
 "Im too tired for this shit"-he said. "Here take some money lady {0}!"\n
 "What do you mean you dont accept bitcoin?"
@@ -49,25 +49,25 @@ Mentor {1}'s happiness level would have dropped down...if he had one.
         if isinstance(person, Robber):
             if int(self.energy_level) < 2:
                 print("""
-On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
-the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
-daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
-just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
-mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor
-smashed the door in the robbers face and shout /"Get the fuck out/" The robber was so embarrassed,
+On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach \
+the first floor after he lied to the security officer by saying he is just a pole dancer. This was a \
+daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber \
+just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell, \
+mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor \
+smashed the door in the robbers face and shout "Get the fuck out" The robber was so embarrassed, \
 he left immediately and gave up on his plans about invading codecool.
                 """.format(self.nickname))
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
             if int(self.energy_level) > 2:
                 setattr(self, "energy_level", 1)
                 print("""
-On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach
-the first floor after he lied to the security officer by saying he is just a pole dancer. This was a
-daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber
-just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
-mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor
-grabbed his gun which accidentally got fired and the bullet hit the office precious projector.
-/"I will beat the sh*t out from you for this!/" shouted mentor {0}, then he punched the robber so
+On a cloudy afternoon a dangerous robber broke into the office building, he managed to reach \
+the first floor after he lied to the security officer by saying he is just a pole dancer. This was a \
+daily routine in the office building located under Nagymezo 44, so there was no suspicion. The robber \
+just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell, \
+mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor \
+grabbed his gun which accidentally got fired and the bullet hit the office precious projector. \
+"I will beat the sh*t out from you for this!" shouted mentor {0}, then he punched the robber so
 hard that a mortal kombat fatality looks peanuts besides it.
                 """.format(self.nickname))
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
