@@ -73,16 +73,18 @@ hard that a mortal kombat fatality looks peanuts besides it.
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
 
     def morning_routine(self, person):
-        print("How's student {0} {1}'s energy level in the morning?".format(person.first_name, person.last_name))
+        print("How's student {0} {1}'s energy level in the morning?\nIt's on {2}.".format(
+            person.first_name, person.last_name, person.energy_level))
+        input()
         if int(person.energy_level) <= 2:
             print("Mentor {0} to {1}:You look freakin tired! Here, sniff some Coke!".format(
                     self.nickname, person.first_name))
             setattr(person, "energy_level", 1024)
-            print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
+            print("{0}'s energy level is now {1}. {0} túltolta".format(person.first_name, person.energy_level))
         elif int(person.energy_level) > 2:
             print("""
 Woo, calm down, you have some extra energy.
-This'll be good for you!-said mentor {0}, and gave some weed to {1}.""".format(self.nickname, person.first_name))
+This'll be good for you!-said mentor {0}, while passing a joint to {1}.""".format(self.nickname, person.first_name))
             setattr(person, "energy_level", 2)
             input()
             print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
