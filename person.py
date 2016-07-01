@@ -19,13 +19,13 @@ commands, {0} {1} is on the way to eat.""".format(self.first_name, self.last_nam
         if food_object.restaurant_status:
             if not self.vegan or (self.vegan and food_object.vegetarian):
                 self.energy_level += 1
-                print("""{0} eats some {1} and goes back to work with enough energy to survive the day.\
+                print("""{0} eats some {1} and goes back to work with just enough energy to survive the day.\
 \n{0}'s energy level is now: {2}.""".format(self.first_name, food_object.name, self.energy_level))
             else:
                 if self.hungriness < 3:
                     self.energy_level -= 1
                     if self.death():
-                        print("""The only food around is {0}, but {1} won't eat that. {1}'s' energy level \
+                        print("""The only food around is {0}, but {1} won't eat that. {1}'s energy level \
 dropped to zero and died.\nLest we forget!""".format(food_object.name, self.first_name))
                         pass
                     else:
@@ -38,7 +38,7 @@ level is too high ({2}) to be vegan this time.".format(food_object.name, self.fi
         else:
             self.energy_level = 0  # for testing, originally it's '-= 1'
             if self.death():
-                print("""There's no {0}, {1}'s' energy level dropped to zero and died.\
+                print("""There's no {0}, {1}'s energy level dropped to zero and died.\
 \nLest we forget!""".format(food_object.name, self.first_name))
                 pass
             else:
