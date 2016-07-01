@@ -4,9 +4,6 @@ from pornstar import Pornstar
 import csv
 
 
-text1 = """Woo, calm down, you have some extra energy.
-This'll be good for you!-said mentor {0}, and gave some weed to {1}."""
-
 class Mentor(Person):
     def __init__(self, nickname, *args, **kwargs):
         super(Mentor, self).__init__(*args, **kwargs)
@@ -83,7 +80,9 @@ hard that a mortal kombat fatality looks peanuts besides it.
             setattr(person, "energy_level", 1024)
             print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
         elif int(person.energy_level) > 2:
-            print(text1.format(self.nickname, person.first_name))
+            print("""
+Woo, calm down, you have some extra energy.
+This'll be good for you!-said mentor {0}, and gave some weed to {1}.""".format(self.nickname, person.first_name))
             setattr(person, "energy_level", 2)
             input()
             print("{0}'s energy level is now {1}.".format(person.first_name, person.energy_level))
