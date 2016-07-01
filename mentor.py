@@ -67,7 +67,7 @@ daily routine in the office building located under Nagymezo 44, so there was no 
 just stopped in front of a door with a codecool sign on it, pulled out his gun and rang the doorbell,
 mentor {0} opened the door, and before the robber even had a chance to say something, our great mentor
 grabbed his gun which accidentally got fired and the bullet hit the office precious projector.
-/"I will beat the sh*t out from you for this!/" shouted mentor {0}, then he punched the robber so
+/"I will beat the sh*t out of you for this!/" shouted mentor {0}, then he punched the robber so
 hard that a mortal kombat fatality looks peanuts besides it.
                 """.format(self.nickname))
                 print("Mentor {0}'s energy level is now {1}.".format(self.nickname, self.energy_level))
