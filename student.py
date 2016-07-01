@@ -21,17 +21,20 @@ class Student(Person):
     def ending_routine(self, mentor):
         if int(mentor.energy_level) == 1:
             print("""
-Our great mentor is low on energy and his mood lacks of happiness, so he decided to make things
+Our great {0} mentor is low on energy and his mood lacks of happiness, so he decided to make things
 a little more exciting by announcing a self evaluation opportunity to the students, and by self evaluation,
 he meant a mandatory exam. He thought that would be nice towards codecoolers if the eligible level would be
-set to 98%. /"Im such a sweetheart/" he said, as he was astonished by his own generosity""")
+set to 98%. "Im such a sweetheart" he said, as he was astonished by his own generosity""".format(mentor.nickname))
+            print("Mentor {0}'s energy level is now {1}.".format(mentor.nickname, mentor.energy_level))
         elif int(mentor.energy_level) == 3:
             print("""
-Our great mentor felt a great amount of energy in himself, /"Its time to give/" he thought.
+Our great {0} mentor felt a great amount of energy in himself, "Its time to give" he thought.
 So he decided to buy beer for the entire class, he later realized the consequences of his generosity as his
-purse became way more lighter than before. But this was a day to give, not to take.""")
+purse became way more lighter than before. But this was a day to give, not to take.""".format(mentor.nickname))
+            print("Mentor {0}'s energy level is now {1}.".format(mentor.nickname, mentor.energy_level))
         else:
             print("""
-Our great mentor has reached the proper energy level, which made him realize the fact that no one gives
-a flying fuck about codecool. /"My work is done here/" thats what he said to himself while he was
-walking out of the office building, located under Nagymezo street 44""")
+Our great {0} mentor has reached the proper energy level, which made him realize the fact that no one gives
+a flying fuck about codecool. "My work is done here" thats what he said to himself while he was
+walking out of the office building, located under Nagymezo street 44""".format(mentor.nickname))
+            print("Mentor {0}'s energy level is now {1}.".format(mentor.nickname, mentor.energy_level))
