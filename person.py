@@ -1,7 +1,5 @@
-# from student.py import Student
+class Person:
 
-
-class Person(object):
     def __init__(self, first_name, last_name, year_of_birth, gender, energy_level, vegan, hungriness):
         self.first_name = first_name
         self.last_name = last_name
@@ -13,12 +11,11 @@ class Person(object):
 
     def death(self):
         if self.energy_level < 1:
-            # Student.remove_dead(self.first_name, self.last_name)
             return(True)
 
     def eat(self, food_object):
-        print("""It's lunchbreak time! Finally...\nAfter the holy trinity of git \
-commands, {0} is on the way to eat.""".format(self.first_name))
+        print("""After the holy trinity of git \
+commands, {0} {1} is on the way to eat.""".format(self.first_name, self.last_name))
         if food_object.restaurant_status:
             if not self.vegan or (self.vegan and food_object.vegetarian):
                 self.energy_level += 1
@@ -45,5 +42,5 @@ level is too high ({2}) to be vegan this time.".format(food_object.name, self.fi
 \nLest we forget!""".format(food_object.name, self.first_name))
                 pass
             else:
-                print("""There's no {0}, so {1} goes back to work hungry.\n{1}'s energy \
+                print("""There's no {0}, because the restaurant is closed, so {1} goes back to work hungry.\n{1}'s energy \
 level is now: {2}.""".format(food_object.name, self.first_name, self.energy_level))
